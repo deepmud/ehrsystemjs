@@ -211,7 +211,7 @@ const togglePasswordVisibility = () => {
           </div>
           
           <div className="mt-8 text-center">
-            <p className="text-gray-600">Don't have an account? <a href="#" className="text-blue-600 hover:text-blue-800 font-medium">Contact administrator</a></p>
+            <p className="text-gray-600">Don&apos;t have an account? <a href="#" className="text-blue-600 hover:text-blue-800 font-medium">Contact administrator</a></p>
           </div>
           
           <div className="mt-10 pt-8 border-t border-gray-200 text-center">

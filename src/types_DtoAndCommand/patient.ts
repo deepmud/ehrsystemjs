@@ -10,6 +10,8 @@ export interface PatientDto {
   regNo?: string;
   town?: string;
   dateRegistered?: string;
+  time?: string;
+  
 }
 
 // For creating a new patient

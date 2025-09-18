@@ -6,7 +6,7 @@ import RequireAuth from "../../components/RequireAuth";
 import { useAuthStore } from "../../store/useAuthStore";
 import { useRouter } from "next/navigation";
 import useSWR from "swr";
-import { DashboardDto, ListDashboardAppointmentDto } from "@/types_DtoAndCommand/appointment";
+import { DashboardDto, DashboardPersonDto, ListDashboardAppointmentDto } from "@/types_DtoAndCommand/appointment";
 import { getDashboard } from "@/hooks/patienthooks";
 import { DeptList } from "@/types_DtoAndCommand/enums";
 import Header from "@/components/Header";
@@ -204,7 +204,7 @@ export default   function  DashboardPage() {
                         <h3 className="text-lg font-bold mb-4">Medical Staffs</h3>
                         <div className="space-y-4">
 
-                        {data.listDashboardPersonDto.map((p: any) => (
+                        {data.listDashboardPersonDto.map((p: DashboardPersonDto) => (
                             <div className="flex items-center" key={p.regno}>
                                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mr-3">
                                     <i className="fas fa-calendar-alt text-blue-500 dark:text-blue-400"></i>

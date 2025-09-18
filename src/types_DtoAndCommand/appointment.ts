@@ -18,14 +18,19 @@ export interface AppointmentDto {
   export interface DashboardDto
   {
        listDashboardAppointment : ListDashboardAppointmentDto[]
-        listDashboardPersonDto : []
+        listDashboardPersonDto : DashboardPersonDto[]
        dailyCount : number
         weeklyCount : number
         monthlyCount : number
         yearlyCount : number
  
   }
-
+  export interface DashboardPersonDto
+  {
+    regno: string,
+    name: string,
+ 
+  }
   export interface ListDashboardAppointmentDto 
     {
       regno: string,

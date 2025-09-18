@@ -89,7 +89,7 @@ export default   function  AddCaseilePage() {
                                 </thead>
                                 <tbody>
                                 { (data.length > 0) ?
-                                data.map((p: any) => (
+                                data.map((p: PatientDto) => (
                                     <tr className="border-b dark:border-gray-700" key={data.indexOf(p)+1}>
                                         <td className="py-3">{data.indexOf(p)+1} </td>
                                         <td className="py-3">{p.firstname}</td>
