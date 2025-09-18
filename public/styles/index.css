@@ -1,0 +1,101 @@
+
+/* Input Group */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="date"],
+input[type="number"],
+input[type="tel"],
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* Checkbox & Radio Group */
+.checkbox-group,
+.radio-group {
+    text-align: left;
+    margin: 10px 0;
+    font-size: small;
+}
+
+
+.radio-group  label {
+    display: inline;
+    margin-right: 10px;
+}
+.checkbox-group,
+ label {
+    display: inline-block;
+    margin-right: 22px;
+}
+
+/* Signup Button */
+.signup-btn {
+    width: 350px;
+    background-color: black;
+
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.signup-btn:hover {
+    background: rgb(28, 28, 28);
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+  .nav2{
+    background-color:white;
+    width: 50%;
+    padding: 50px 50px;
+    box-shadow: 100px 0px white;
+  
+  }#feature-box {
+    width: 50%; 
+    background: rgb(60, 60, 1);
+  
+  }
+  #button{
+    height: 75px;
+    width: 266px;
+    color: white;
+  background-color: rgb(60, 60, 1);
+  border-radius: 20px;
+  }
+  #membershipj{
+    text-align: center;
+    margin: 50% auto;
+    height: inherit;
+    width: inherit;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-style: italic;
+    font-family: cursive;
+  }
