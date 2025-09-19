@@ -58,7 +58,7 @@ export default   function  DashboardPage() {
                     {/* <!-- Appointment Section --> */}
                     <div className="bg-white dark:bg-dark rounded-lg shadow p-6">
                         <div className="flex justify-between items-center mb-6">
-                            <h3 className="text-lg font-bold">{data?.name} ({data?.regNo})</h3>
+                            <h3 className="text-lg font-bold"></h3>
                             <div className="flex space-x-2">
                                 <button className="px-3 py-1 bg-primary text-white rounded-lg text-sm">Staff</button>
                                 {/* <button className="px-3 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg text-sm" onClick={() => router.push(`/medicalrecords/addcasefiles/${data.regNo}`)}>Add Case file</button> */}

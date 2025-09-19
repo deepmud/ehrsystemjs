@@ -18,6 +18,8 @@ const schema = z.object({
   // rememberMe: z.boolean(),
 });
 
+
+
 type FormData = z.infer<typeof schema>;
 
 export default function LoginPages() {
@@ -27,8 +29,14 @@ export default function LoginPages() {
 
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
   const login = useAuthStore((state) => state.login);
   const router = useRouter();
+
+  const handleClick = () => {
+    setIsClicked(true);                 // turn red
+    setTimeout(() => setIsClicked(false), 1000); // back to blue after 1s
+  };
 // Toggle password visibility
 /**
  * Function to toggle the visibility of password
@@ -62,6 +70,7 @@ const togglePasswordVisibility = () => {
   };
 
   return (
+  
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-indigo-50 p-4">
       <div className="max-w-5xl w-full bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row">
         {/* Left Column - Illustration */}
@@ -150,6 +159,7 @@ const togglePasswordVisibility = () => {
                 <button 
                   type="button" 
                   className="absolute inset-y-0 right-0 pr-3 flex items-center"
+                 
                   onClick={togglePasswordVisibility}
                 >
                   <i className={`fas ${showPassword ? 'fa-eye' : 'fa-eye-slash'} text-gray-400`}></i>
@@ -172,22 +182,25 @@ const togglePasswordVisibility = () => {
               </div>
               <a href="#" className="text-sm text-blue-600 hover:text-blue-800">Forgot password?</a>
             </div>
-            
-            <button 
-              type="submit" 
-              className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition duration-150 ease-in-out flex items-center justify-center"
-              disabled={isLoading}
-            >
-              {isLoading ? (
-                <>
-                  <i className="fas fa-spinner fa-spin mr-2"></i>
-                  Signing in...
-                </>
-              ) : (
-                'Sign In'
-              )}
-              Sign In
-            </button>
+            <button
+      type="submit"
+      onClick={handleClick}
+      className={`w-full text-white py-3 px-4 rounded-lg font-semibold 
+                  hover:bg-blue-700 focus:outline-none focus:ring-2 
+                  focus:ring-blue-500 focus:ring-offset-2 
+                  transition duration-150 ease-in-out flex items-center justify-center
+                  ${isClicked ? "bg-blue-400" : "bg-blue-600"}`}
+      disabled={isLoading}
+    >
+      {isLoading ? (
+        <>
+          <i className="fas fa-spinner fa-spin mr-2"></i>
+          Signing in...
+        </>
+      ) : (
+        "Sign In"
+      )}
+    </button>
           </form>
           
           <div className="mt-8">
